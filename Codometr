@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Потужномір</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff8800;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #ff6600;
+    }
+    .result {
+      font-size: 36px;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+    .comment {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Потужномір 3000</h1>
+  <button onclick="measurePower()">Виміряти потужність</button>
+  <div class="result" id="result"></div>
+  <div class="comment" id="comment"></div>  <script>
+    const comments = [
+      "Ти на рівні батька Свята!",
+      "Потужність як у пательні!",
+      "Це вже майже Потап!",
+      "Сканер ледь не вибухнув!",
+      "Навіть ЗСУ респектують!",
+      "Ти міг би зарядити всю Хмельниччину!",
+      "Це щось на рівні Ярослава з Сільпо",
+      "Ого, це рівень Паляниці!",
+      "Краще ніж у твого однокласника!",
+      "Вареник зацінив би!"
+    ];
+
+    function measurePower() {
+      const power = Math.floor(Math.random() * 100) + 1;
+      const comment = comments[Math.floor(Math.random() * comments.length)];
+      document.getElementById("result").innerText = `Твоя потужність: ${power}`;
+      document.getElementById("comment").innerText = comment;
+    }
+  </script></body>
+</html>
